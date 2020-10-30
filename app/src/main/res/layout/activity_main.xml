@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/sopt_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="SOPT"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="32dp"
+        android:text="아이디"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sopt_txt" />
+
+    <EditText
+        android:id="@+id/id_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Input your ID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/id_txt"
+        app:layout_constraintTop_toBottomOf="@+id/id_txt" />
+
+    <TextView
+        android:id="@+id/pw_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="비밀번호"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/id_input"
+        app:layout_constraintTop_toBottomOf="@+id/id_input" />
+
+    <EditText
+        android:id="@+id/pw_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Input your Password"
+        app:layout_constraintEnd_toEndOf="@+id/id_input"
+        app:layout_constraintStart_toStartOf="@+id/pw_txt"
+        app:layout_constraintTop_toBottomOf="@+id/pw_txt" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="로그인"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/pw_input"
+        app:layout_constraintStart_toStartOf="@+id/pw_input"
+        app:layout_constraintTop_toBottomOf="@+id/pw_input" />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="회원가입"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+
+    <CheckBox
+        android:id="@+id/checkBox_auto"
+        android:layout_width="102dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:text="자동로그인"
+        app:layout_constraintStart_toStartOf="@+id/login_btn"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
