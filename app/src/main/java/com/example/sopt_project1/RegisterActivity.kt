@@ -38,6 +38,7 @@ class RegisterActivity : AppCompatActivity() {
 
                 intent2.putExtra("id",regi_id_input.text.toString())
                 intent2.putExtra("pw",regi_pw_input.text.toString())
+                //setResult(Activity.RESULT_OK,intent2)
                 startActivityForResult(intent2,200)
                 finish()
 

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sopt_project1">
-        <activity android:name=".RecyclerActivity_Detail"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".RecyclerActivity_Detail" />
         <activity android:name=".RecyclerActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity">

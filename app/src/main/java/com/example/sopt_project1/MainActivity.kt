@@ -19,32 +19,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //자동로그인 코드
-        sharedPreferences=getSharedPreferences("login_pref", Context.MODE_PRIVATE)
-        isChecked=sharedPreferences.getBoolean("checkBox",false)
-
-        if(isChecked){
-            val intent=Intent(this,RecyclerActivity::class.java)
-            startActivity(intent)
-            finish()
+        val pref=getSharedPreferences("pref_login",Context.MODE_PRIVATE)
+        val id=pref.getString("id","")
+        val pw=pref.getString("pw","")
+        if(id!=""&&pw!=""){
+            id_input.setText(id.toString())
+            pw_input.setText(pw.toString())
         }
 
         //로그인버튼
         login_btn.setOnClickListener{
-            //추가
-            val id=id_input.text.toString()
-            val password= pw_input.text.toString()
-            val checked=checkBox_auto.isChecked
+            /*
+            val pref=getSharedPreferences("pref_login",Context.MODE_PRIVATE)
+            val editor=pref.edit()
 
-            val editor=sharedPreferences.edit()
-            editor.putString("ID",id)
-            editor.putString("PW",password)
-            editor.putBoolean("CheckBox",checked)
-            editor.apply()
+            //위에랑 같지만 상황이 다르니까 풀어써놓음.
+            if(pref.getString("id","").toString().length!=0&&pref.getString("pw","").toString().length!=0){
+                val id=id_input.text.toString()
+                val pw= pw_input.text.toString()
 
-            Toast.makeText(this,"자동로그인됨",Toast.LENGTH_LONG).show()
-           //
-            val intent_rec= Intent(this,RecyclerActivity::class.java)
+                editor.putString("id",id)
+                editor.putString("pw",pw)
+                editor.apply()
+
+                Toast.makeText(this,"자동로그인됨",Toast.LENGTH_LONG).show()
+            }
+            */
+            val intent_rec= Intent(this,ProfileActivity::class.java)
+            //RecyclerActivity였던거 MainActivity2(ProfileActivity) 로 바꿈.
             startActivity(intent_rec)
             finish()
         }
@@ -68,7 +70,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
     //id랑 pw 넘겨주려고 override 하는것.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -77,12 +78,15 @@ class MainActivity : AppCompatActivity() {
                 200->{
                     id_input.setText(data!!.getStringExtra("id"))
                     //왜 이렇게 했을땐 setText 바로 안뜨는지.
-                    pw_input.setText(data!!.getStringExtra("pw"))
+                    pw_input.setText(data.getStringExtra("pw"))
+                    //왜 여기 data뒤엔 !! 넣으면 워닝 뜨는지.
                 }
 
             }
 
         }
     }
+
+
 
 }

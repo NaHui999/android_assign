@@ -7,8 +7,8 @@
     </item>
 
     <item
-        android:id="@+id/change_logout"
-        android:title="로그아웃 변경">
+        android:id="@+id/change_layout"
+        android:title="레이아웃 변경">
 
         <menu>
             <item

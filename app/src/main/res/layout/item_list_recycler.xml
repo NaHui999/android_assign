@@ -13,7 +13,7 @@
         android:layout_height="120dp"
         android:layout_margin="20dp"
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#CCCCCC">
+        app:cardBackgroundColor="#E9ECEF">
 
         <ImageView
             android:id="@+id/item_image"
@@ -28,16 +28,16 @@
             android:layout_marginLeft="140dp"
             android:layout_marginTop="10dp"
             android:text="타이틀"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/item_subtitle"
             android:layout_width="219dp"
-            android:layout_height="36dp"
+            android:layout_height="42dp"
             android:layout_marginLeft="140dp"
             android:layout_marginTop="60dp"
             android:text="서브타이틀"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
 
     </androidx.cardview.widget.CardView>
