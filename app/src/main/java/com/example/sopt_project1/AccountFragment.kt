@@ -36,7 +36,7 @@ class AccountFragment : Fragment() {
 
         sample_tab.setupWithViewPager(sample_tab_viewpager)
         sample_tab.apply{
-            getTabAt(0)?.text="INFO"
+            getTabAt(0)?.text="PROJECTS"
             getTabAt(1)?.text="OTHER"
         }
     }

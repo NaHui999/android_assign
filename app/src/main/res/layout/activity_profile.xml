@@ -22,7 +22,7 @@
         android:id="@+id/sample_bottom_navi"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:background="#141414"
         app:itemIconTint="@color/bottom_navi_color"
         app:itemRippleColor="#86C3BA"
         app:itemTextColor="@color/bottom_navi_color"

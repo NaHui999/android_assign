@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/menu_account"
-        android:icon="@drawable/ic_baseline_face"
-        android:title="Account"/>
+        android:icon="@drawable/ic_me"
+        android:title="Me"/>
 
     <item
         android:id="@+id/menu_recy"
-        android:icon="@drawable/ic_baseline_recy"
-        android:title="Recy"/>
+        android:icon="@drawable/mdi_accessibility"
+        android:title="PortFolio"/>
 
     <item
         android:id="@+id/menu_msg"
-        android:icon="@drawable/ic_baseline_message"
-        android:title="MSG"/>
+        android:icon="@drawable/ic_setting"
+        android:title="Setting"/>
 
 </menu>

@@ -44,17 +44,7 @@ class RecyclerAdapter (private val context:Context) : RecyclerView.Adapter<Recyc
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.onBind(data[position])
 
-        holder.itemView.setOnClickListener{
 
-            val intent_detail=Intent(holder.itemView.context,Activity_Recycler_Detail::class.java)
-
-            intent_detail.putExtra("title",data[position].title)
-            intent_detail.putExtra("subtitle",data[position].subTitle)
-            intent_detail.putExtra("date",data[position].date)
-            intent_detail.putExtra("add",data[position].add)
-
-            startActivity(holder.itemView.context,intent_detail,null)
-        }
 
     }
 
