@@ -3,5 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBD0D0"
-    tools:context=".FirstFragment" />
+    android:background="#ffffff"
+    tools:context=".FirstFragment" >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reqres_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="213dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@
         app:cardBackgroundColor="#E9ECEF">
 
         <ImageView
-            android:id="@+id/item_image"
+            android:id="@+id/rcy_img"
             android:layout_width="120dp"
             android:layout_height="120dp"
             app:srcCompat="@drawable/sopt" />
